@@ -1,0 +1,4 @@
+w7p2.c: In function ‘main’:
+w7p2.c:42:40: warning: unused variable ‘x’ [-Wunused-variable]
+     int flag = 0,g,p,c,v,b,o,i,k,a,s,d,x,counter1 = 0,counter2 = 0, position = 0, maj = 1,min = 1,nextMv = 0, pastMove = 0;
+                                        ^

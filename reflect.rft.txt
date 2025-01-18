@@ -1,0 +1,98 @@
+
+
+/*/////////////////////////////////////////////////////////////////////////\cf4 \
+\cf2                           Workshop - #7 (P2)\cf4 \
+\cf2 Full Name  :Che Joseph Fuh\cf4 \
+\cf2 Student ID#:146644224\cf4 \
+\cf2 Email      :\cf5 jfche@myseneca.ca\cf4 \
+\cf2 Section    :ZCC\cf4 \
+\
+\cf2 Authenticity Declaration:\cf4 \
+\cf2 I declare this submission is the result of my own work and has not been\cf4 \
+\cf2 shared with any other student or 3rd party content provider. This submitted\cf4 \
+\cf2 piece of work is entirely of my own creation.\cf4 \
+\cf2 /////////////////////////////////////////////////////////////////////////*/\
+\
+1.\cf6 \cb7  #define maxPath 70\
+#define minPath 10\
+#define maxLive 10\
+#define minLive 1\
+#define five 5\
+\
+    
+\f1\b int
+\f0\b0  numLives;\
+    
+\f1\b char
+\f0\b0  playerSymbol;\
+    
+\f1\b int
+\f0\b0  numTreasures;\
+    
+\f1\b int
+\f0\b0  pstPosition[maxPath];\
+\
+    
+\f1\b int
+\f0\b0  moves;\
+    
+\f1\b int
+\f0\b0  pathLength;\
+    
+\f1\b int
+\f0\b0  bombs[maxPath];\
+    
+\f1\b int
+\f0\b0  treasures[maxPath];\
+    
+\f1\b int
+\f0\b0  history[maxPath];\cb8 \
+\
+\pard\tx741\pardeftab741\partightenfactor0
+\cf6 \cb3 Each variable from the PlayerInfo and GameInfo has been declared separately. Thus eliminating the use of structures\
+\
+2. Bomb[] and treasure[]: 
+\f2\fs32 \expnd0\expndtw0\kerning0
+These arrays represent the placement of bombs and treasures along the game path, respectively. Each element of these arrays corresponds to a position on the path. If the value at a particular index is 1, it indicates the presence of a bomb or treasure at that position; if it's 0, there is no bomb or treasure at that position.\
+\
+3.\cb7 This statement is responsible for printing either the value of \'91
+\f3\fs28 maj\'92
+\f2\fs32  or the character \'91
+\f3\fs28 bar\'92
+\f2\fs32  based on the condition.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f3\fs28 \cf6 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+v
+\f2\fs32  iterates over the path length.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf6 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+If the index is 
+\f3\fs28 (v + 1) % 10 == 0
+\f2\fs32 , it means that 
+\f3\fs28 v + 1
+\f2\fs32  is a multiple of 10.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+In that case, the value of 
+\f3\fs28 maj
+\f2\fs32  is printed, and then 
+\f3\fs28 maj
+\f2\fs32  is incremented.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+If the condition is not met, the character 
+\f3\fs28 bar
+\f2\fs32  is printed.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+This logic repeats for each iteration of the nested loop until the condition for its parent loop is no longer true.\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf6            \
+ if ((v + 1) % 10 == 0)\{\
+                printf("%d", maj);\
+                maj++;\
+                \
+            \}\
+            else\{\
+                printf("%c", bar);\
+            \}\
+\
+}
